@@ -1,0 +1,14 @@
+.teste {
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: aqua;
+    box-shadow: 20px 0 green inset;
+    transition: 0.5s;
+}
+
+.teste:hover {
+    background: yellow;
+    box-shadow: none;
+}
