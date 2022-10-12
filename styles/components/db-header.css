@@ -1,0 +1,40 @@
+.db-header {
+    width: 100vw;
+    height: var(--db-header-height);
+    background-color: var(--db-color-primary);
+}
+
+.db-header >.wrapper {
+    max-width: 1728px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.db-header >.wrapper >.logo {
+    width: 120px;
+    margin: 15px;
+}
+
+.db-header >.wrapper button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding: 0 20px;
+    color: var(--db-color-white);
+    font-family: var(--db-font-family-title);
+    font-size: var(--db-font-size-base);
+    font-weight: 700;
+    transition: background-color 0.5s;
+}
+
+.db-header >.wrapper button:hover {
+    background-color: var(--db-color-primary-dark);
+}
+
+.db-header >.wrapper >.-active {
+    background-color: var(--db-color-primary-dark);
+}
