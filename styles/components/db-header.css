@@ -7,7 +7,7 @@
 }
 
 .db-header >.wrapper {
-    max-width: 1728px;
+    max-width: var(--db-wrapper);
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -18,7 +18,6 @@
 
 .db-header >.wrapper >.logo {
     width: 120px;
-    margin: 15px;
 }
 
 .db-header >.wrapper button {

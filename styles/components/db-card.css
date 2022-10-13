@@ -1,0 +1,34 @@
+.db-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--db-color-beige);
+    max-width: calc((100% - 80px) / 3);
+}
+
+.db-card >img {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 45%;
+    object-fit: cover;
+}
+
+.db-card >.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.db-card >.content >.title {
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 15px);
+    font-weight: 700;
+}
+
+.db-card >.content >.description {
+    font-family: var(--db-font-family-text);
+    font-size: var(--db-font-size-base);
+    color: var(--db-color-gray);
+    line-height: 2rem;
+}
