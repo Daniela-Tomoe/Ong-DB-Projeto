@@ -2,6 +2,7 @@
     width: 100vw;
     height: var(--db-header-height);
     background-color: var(--db-color-primary);
+    position: fixed;
 }
 
 .db-header >.wrapper {
@@ -24,14 +25,14 @@
     border: none;
     height: 100%;
     padding: 0 20px;
-    color: var(--db-color-white);
+    color: white;
     font-family: var(--db-font-family-title);
     font-size: var(--db-font-size-base);
     font-weight: 700;
     transition: background-color 0.5s;
 }
 
-.db-header >.wrapper button:hover {
+.db-header >.wrapper >button:hover {
     background-color: var(--db-color-primary-dark);
 }
 

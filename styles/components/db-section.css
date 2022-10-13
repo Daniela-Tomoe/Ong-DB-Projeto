@@ -1,0 +1,39 @@
+.db-section {
+    max-width: 1728px;
+    max-height: 100vh;
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.db-section >.title{
+    color: var(--db-color-secondary);
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 43px);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+.db-section >.title:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100px;
+    background-color: var(--db-color-primary);
+    position: absolute;
+    top: 50%;
+}
+
+.db-section >.title:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100px;
+    background-color: var(--db-color-primary);
+    position: absolute;
+    top: 50%;
+}
