@@ -63,7 +63,7 @@
     line-height: 1.8rem;
 }
 
-.db-section.-bg-color {
+.db-section.--bg-beige {
     background-color: var(--db-color-beige);
 }
 

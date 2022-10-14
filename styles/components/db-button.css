@@ -34,7 +34,7 @@
     background-color: var(--db-color-primary-dark);
 }
 
-.db-button.-accordion:active .fa-angle-down {
+.db-button.-accordion:active >.fa-angle-down {
     rotate: 180deg;
 }
 
