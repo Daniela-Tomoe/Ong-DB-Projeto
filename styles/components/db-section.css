@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.-with-bg-bones {
+.db-section.-with-bg-bones {
     background-image: url(../../assets/img/bones1.png), url(../../assets/img/bones2.png);
     background-repeat: no-repeat;
     background-position: left 40%, right 40%;
@@ -60,7 +60,48 @@
     font-family: var(--db-font-family-text);
     font-size: var(--db-font-size-base);
     color: var(--db-color-gray);
-    line-height: 2rem;
+    line-height: 1.8rem;
+}
+
+.db-section.-bg-color {
+    background-color: var(--db-color-beige);
+}
+
+.db-section >.content-image {
+    max-width: var(--db-wrapper);
+    width: 100%;
+    align-self: center;
+    display: flex;
+    padding-top: 110px;
+    column-gap: 30px;
+}
+
+.db-section >.content-image >.content {
+    width: 60%;
+    padding: 0 10px;
+}
+
+.db-section >.content-image >.content >.title {
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 25px);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.db-section >.content-image >.content .description {
+    font-family: var(--db-font-family-text);
+    font-size: var(--db-font-size-base);
+    color: var(--db-color-gray);
+    line-height: 1.8rem;
+    padding: 10px 0;
+}
+
+.db-section >.content-image >.image {
+    width: 40%;
+}
+
+.db-section >.content-image >.image >img {
+    width: 100%;
 }
 
 .db-section >.cards-wrapper {

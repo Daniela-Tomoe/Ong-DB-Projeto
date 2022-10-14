@@ -1,0 +1,30 @@
+.db-circle-card >.fa-solid {
+    border-radius: 50%;
+    padding: 35px;
+    border: 5px solid var(--db-color-primary-dark);
+    color: var(--db-color-secondary);
+    font-size: calc(var(--db-font-size-base) + 45px);
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.db-circle-card >.title {
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 8px);
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.db-circle-card >.description {
+    font-family: var(--db-font-family-text);
+    font-size: var(--db-font-size-base);
+    color: var(--db-color-gray);
+    line-height: 1.8rem;
+    padding: 0 10px;
+}
+
+.db-circle-card:hover .fa-solid {
+    color: var(--db-color-primary-dark);
+    scale: 1.2;
+}
