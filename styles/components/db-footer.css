@@ -1,0 +1,37 @@
+.db-footer {
+    background-color: var(--db-color-gray-dark);
+    padding: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.db-footer >.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.db-footer >.content >.contact p {
+    font-family: var(--db-font-family-text);
+    font-size: var(--db-font-size-base);
+    padding: 5px;
+}
+
+.db-footer >.content >.contact .fa-solid {
+    color: var(--db-color-secondary);
+    margin-right: 8px;
+}
+
+.db-footer >.content >.social-media >.title {
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 10px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.db-footer >.copyright {
+    font-family: var(--db-font-family-text);
+    font-size: calc(var(--db-font-size-base) - 5px);
+    margin-top: 15px;
+}

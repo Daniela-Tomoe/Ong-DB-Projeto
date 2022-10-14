@@ -1,3 +1,31 @@
+.arrow-back {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    width: fit-content;
+    z-index: 3;
+    background-color: var(--db-color-primary-dark);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    rotate: 180deg;
+    transition: 0.5s;
+}
+
+.arrow-back >a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.arrow-back:hover {
+    background-color: var(--db-color-secondary);
+}
+
 .greetings-wrapper {
     height: calc(100vh - var(--db-header-height));
     position: relative;
@@ -30,4 +58,8 @@
 
 .how-we-work >.title {
     max-width: 840px;
+}
+
+.map {
+    border-top: 8px solid var(--db-color-primary);
 }
