@@ -24,13 +24,14 @@
     padding: 10px;
 }
 
-.what-we-do {
-    background-image: url(../../assets/img/bones1.png), url(../../assets/img/bones2.png);
-    background-repeat: no-repeat;
-    background-position: left 40%, right 40%;
-    background-attachment: fixed;
-}
-
 .what-we-do >.title {
     max-width: 700px;
+}
+
+.how-we-work {
+    background-color: gray;
+}
+
+.fa-regular {
+    color: white;
 }

@@ -6,6 +6,13 @@
     margin: 0 auto;
 }
 
+.-with-bg-bones {
+    background-image: url(../../assets/img/bones1.png), url(../../assets/img/bones2.png);
+    background-repeat: no-repeat;
+    background-position: left 40%, right 40%;
+    background-attachment: fixed;
+}
+
 .db-section >.title{
     color: var(--db-color-secondary);
     font-family: var(--db-font-family-title);
@@ -15,7 +22,6 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-
 }
 
 .db-section >.title::before {
