@@ -35,3 +35,32 @@
     font-size: calc(var(--db-font-size-base) - 5px);
     margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+    .db-footer >.content {
+        flex-direction: column;
+    }
+    .db-footer >.content >.logo {
+        width: 335px;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    .db-footer >.content >.contact {
+        margin-bottom: 30px;
+    }
+    .db-footer >.content >.contact p {
+        font-size: calc(var(--db-font-size-base) - 1px);
+    }
+    .db-footer >.content >.social-media {
+        margin-bottom: 10px;
+    }
+    .db-footer >.content >.social-media >.title {
+        font-size: calc(var(--db-font-size-base) + 5px);
+    }
+}
+
+@media (max-width: 426px) {
+    .db-footer >.content >.logo {
+        width: 200px;
+    }
+}

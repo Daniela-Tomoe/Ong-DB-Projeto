@@ -63,3 +63,21 @@
 .db-home >.map {
     border-top: 8px solid var(--db-color-primary);
 }
+
+@media (max-width: 768px) {
+    .db-home >.arrow-back {
+        display: none;
+    }
+    .db-home >.greetings-wrapper >.title {
+        font-size: calc(var(--db-font-size-base) + 43px);
+    }
+}
+
+@media (max-width: 426px) {
+    .db-home >.greetings-wrapper {
+        height: calc(50vh - var(--db-header-height));
+    }
+    .db-home >.greetings-wrapper >.title {
+        font-size: calc(var(--db-font-size-base) + 23px);
+    }
+}

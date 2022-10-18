@@ -32,3 +32,10 @@
     color: var(--db-color-gray);
     line-height: 2rem;
 }
+
+@media (max-width: 768px) {
+    .db-card {
+        min-width: 100%;
+        box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+}

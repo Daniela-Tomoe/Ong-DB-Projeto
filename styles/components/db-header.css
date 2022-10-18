@@ -7,7 +7,7 @@
 }
 
 .db-header >.wrapper {
-    max-width: var(--db-wrapper);
+    max-width: var(--db-wrapper-desktop);
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -20,7 +20,7 @@
     width: 120px;
 }
 
-.db-header >.wrapper button {
+.db-header button {
     background-color: transparent;
     border: none;
     height: 100%;
@@ -32,10 +32,58 @@
     transition: background-color 0.5s;
 }
 
-.db-header >.wrapper >button:hover {
+.db-header button:hover {
     background-color: var(--db-color-primary-dark);
 }
 
-.db-header >.wrapper >.-active {
+.db-header .home.-active {
     background-color: var(--db-color-primary-dark);
+}
+
+.db-header >.wrapper >.menu {
+    display: none;
+}
+
+.db-header >.nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--db-color-primary);
+    position: absolute;
+    padding: 5px;
+    gap: 5px;
+    top: -100vh;
+}
+
+.db-header >.nav-menu >button {
+    height: var(--db-header-height);
+}
+
+@media (max-width: 768px) {
+    .db-header >.wrapper {
+        max-width: var(--db-wrapper-tablet);
+    }
+    .db-header >.wrapper >.home {
+        display: none;
+    }
+    .db-header >.wrapper >.donation {
+        display: none;
+    }
+    .db-header >.wrapper >.menu {
+        display: block;
+        font-size: calc(var(--db-font-size-base) + 20px);
+        color: var(--db-color-secondary);
+    }
+    .db-header >.wrapper >.menu:hover {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+@media (max-width: 426px) {
+    .db-header >.wrapper {
+        max-width: 100%;
+        padding: 10px;
+    }
+
 }

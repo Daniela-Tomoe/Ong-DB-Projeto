@@ -28,3 +28,18 @@
     color: var(--db-color-primary-dark);
     scale: 1.2;
 }
+
+@media (max-width: 768px) {
+    .db-circle-card {
+        max-width: calc((100vw - 100px) / 2);
+    }
+    .db-circle-card >.title {
+        font-size: calc(var(--db-font-size-base) + 4px);
+    }
+}
+
+@media (max-width: 426px) {
+    .db-circle-card {
+        max-width: 100%;
+    }
+}
