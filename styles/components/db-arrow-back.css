@@ -24,4 +24,5 @@
 
 .db-arrow-back:hover {
     background-color: var(--db-color-secondary);
+    cursor: pointer;
 }

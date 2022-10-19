@@ -16,4 +16,5 @@
     scale: 1.2;
     background-color: white;
     color: var(--db-color-secondary);
+    cursor: pointer;
 }

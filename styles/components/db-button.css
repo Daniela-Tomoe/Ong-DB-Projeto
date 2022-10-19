@@ -17,6 +17,7 @@
 .db-button:hover {
     background: var(--db-color-primary-dark);
     box-shadow: none;
+    cursor: pointer;
 }
 
 .db-button.-accordion {
@@ -32,6 +33,7 @@
 
 .db-button.-accordion:hover, .db-button.-accordion:active {
     background-color: var(--db-color-primary-dark);
+    cursor: pointer;
 }
 
 .db-button.-accordion:active >.fa-angle-down {
