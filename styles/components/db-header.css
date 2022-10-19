@@ -62,6 +62,7 @@
 @media (max-width: 768px) {
     .db-header >.wrapper {
         max-width: var(--db-wrapper-tablet);
+        padding: 10px;
     }
     .db-header >.wrapper >.home {
         display: none;
