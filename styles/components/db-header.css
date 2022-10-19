@@ -20,7 +20,7 @@
     width: 120px;
 }
 
-.db-header button {
+.db-header a {
     background-color: transparent;
     border: none;
     height: 100%;
@@ -30,9 +30,11 @@
     font-size: var(--db-font-size-base);
     font-weight: 700;
     transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
 }
 
-.db-header button:hover {
+.db-header a:hover {
     background-color: var(--db-color-primary-dark);
 }
 
@@ -55,7 +57,7 @@
     top: -100vh;
 }
 
-.db-header >.nav-menu >button {
+.db-header >.nav-menu >a {
     height: var(--db-header-height);
 }
 

@@ -1,5 +1,6 @@
 .db-footer {
     background-color: var(--db-color-gray-dark);
+    width: 100vw;
     padding: 50px;
     text-align: center;
     padding-bottom: 30px;

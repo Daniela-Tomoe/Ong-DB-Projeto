@@ -1,0 +1,27 @@
+.db-arrow-back {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    width: fit-content;
+    z-index: 3;
+    background-color: var(--db-color-primary-dark);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    rotate: 180deg;
+    transition: 0.5s;
+}
+
+.db-arrow-back >.back-to-top {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.db-arrow-back:hover {
+    background-color: var(--db-color-secondary);
+}

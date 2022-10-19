@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG DB Doações - Faça sua doação</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+    
+    <!--SETTINGS-->
+    <link rel="stylesheet" href="styles/settings/color.css">
+    <link rel="stylesheet" href="styles/settings/text.css">
+    <link rel="stylesheet" href="styles/settings/core.css">
+    <link rel="stylesheet" href="styles/settings/wrapper.css">
+    
+    <!--TOOLS-->
+
+    <!--GENERIC-->
+    <link rel="stylesheet" href="styles/generic/reset.css">
+    <link rel="stylesheet" href="styles/generic/box-sizing.css">
+
+    <!--BASE-->
+
+    <!---OBJECTS-->
+
+    <!--COMPONENTS-->
+    <link rel="stylesheet" href="styles/components/db-accordion.css">
+    <link rel="stylesheet" href="styles/components/db-button.css">
+    <link rel="stylesheet" href="styles/components/db-card.css">
+    <link rel="stylesheet" href="styles/components/db-circle-card.css">
+    <link rel="stylesheet" href="styles/components/db-footer.css">
+    <link rel="stylesheet" href="styles/components/db-header.css">
+    <link rel="stylesheet" href="styles/components/db-section.css">
+    <link rel="stylesheet" href="styles/components/db-icon-button.css">
+    <link rel="stylesheet" href="styles/components/db-arrow-back.css">
+    <link rel="stylesheet" href="styles/components/db-input.css">
+
+    <!--PAGES-->
+    <link rel="stylesheet" href="styles/pages/db-donation.css">
+
+    <!--TRUMPS-->
+
+</head>
+<body id="top">
+    <main class="db-donation">
+        <header class="db-header">
+            <div class="wrapper">
+                <a class="home -active">Home</a>
+                <img src="assets/img/logo.png" alt="Logo da ONG DB" class="logo">
+                <a class="donation">Faça já sua doação!</a>
+                <a class="menu"><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <nav class="nav-menu -active">
+                <a class="home -active">Home</a>
+                <a class="donation">Faça já sua doação!</a>
+            </nav>
+        </header>
+        <div class="db-arrow-back">
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-angle-down"></i></a>
+        </div>
+        <section class="db-section donation">
+            <div class="image-form">
+                <div class="image">
+                    <img src="assets/img/dog.png" alt="Imagem de cachorro caramelo">
+                </div>
+                <form class="form">
+                    <h1 class="title">
+                        <span>Sua doação irá mudar vidas!</span>
+                        <span>(Passo 1 de 2)</span>
+                    </h1>
+                    <label for="name">Nome<span>*</span></label>
+                    <input type="text" class="db-input" id="name" required>
+                    <label for="email">Email<span>*</span></label>
+                    <input type="email" class="db-input" id="email" required>
+                    <label for="anniversary">Data de aniversário</label>
+                    <input type="date" class="db-input" id="anniversary" required>
+                    <div class="donation">
+                        <span for="money">Valor para doação</span>
+                        <div class="money">
+                            <button><i class="fa-solid fa-minus"></i></i></button>
+                            <span>R$ 10,00</span>
+                            <button><i class="fa-solid fa-plus"></button>
+                        </div>
+                    </div>
+                    <button>Avançar</button>
+                </form>
+            </div>
+        </section>
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1401.953563499227!2d-46.69590555813838!3d-23.60565339395464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1665765094530!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <footer class="db-footer">
+            <div class="content">
+                <img src="assets/img/logo.png" alt="Logo da ONG DB" class="logo">
+                <div class="contact">
+                    <p class="tel"><i class="fa-solid fa-phone"></i>(000) 0000-0000</p>
+                    <p class="email"><i class="fa-solid fa-envelope"></i>Email: site@email.com</p>
+                    <p class="adress"><i class="fa-solid fa-location-dot"></i>123 Anywhere Street, London, LO4 6ON</p>
+                </div>
+                <div class="social-media">
+                    <h2 class="title">Follow us</h2>
+                    <div class="buttons">
+                        <button class="db-icon-button"><i class="fa-brands fa-twitter"></i></button>
+                        <button class="db-icon-button"><i class="fa-brands fa-facebook-f"></i></button>
+                        <button class="db-icon-button"><i class="fa-brands fa-google-plus-g"></i></button>
+                        <button class="db-icon-button"><i class="fa-brands fa-instagram"></i></button>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">Copyright &copy; 2017 - 2021 Assembled by Dani</p>
+        </footer>
+    </main>
+</body>
+</html>
