@@ -161,6 +161,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 30px;
 }
 
 .db-section >.image-form >.form >.donation-value >.title {
@@ -172,7 +173,12 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-bottom: 30px;
+}
+
+.db-section >.image-form >.form >.donation-value >span {
+    font-family: var(--db-font-family-title);
+    font-weight: 700;
+    font-size: calc(var(--db-font-size-base) + 1px);
 }
 
 .db-section >.image-form >.form >button {

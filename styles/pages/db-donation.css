@@ -1,0 +1,10 @@
+.db-donation >.db-section >.image-form >.form >.card-info {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.db-donation >.db-section >.image-form >.form >.card-info >.info {
+    width: 50%;
+    text-align: left;
+}
