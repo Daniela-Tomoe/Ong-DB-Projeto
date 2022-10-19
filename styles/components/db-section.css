@@ -140,11 +140,11 @@
     padding: 0 20px;
 }
 
-.db-section >.image-form >.form .primary-color {
+.db-section .primary-color {
     color: var(--db-color-primary);
 }
 
-.db-section >.image-form >.form .primary-color-dark {
+.db-section .primary-color-dark {
     color: var(--db-color-primary-dark);
 }
 
@@ -175,7 +175,7 @@
     align-items: center;
 }
 
-.db-section >.image-form >.form >.donation-value >span {
+.db-section >.image-form >.form >.donation-value .value {
     font-family: var(--db-font-family-title);
     font-weight: 700;
     font-size: calc(var(--db-font-size-base) + 1px);
@@ -185,6 +185,32 @@
     align-self: flex-start;
 }
 
+.db-section >.image-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.db-section >.image-text >.image {
+    background-image: url(../../assets/img/happy-dog.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.db-section >.image-text >.text {
+    margin: 20px;
+}
+
+.db-section >.image-text >.text >.text {
+    font-family: var(--db-font-family-title);
+    font-weight: 700;
+}
 @media (max-width: 768px) {
     .db-section.-with-bg-bones {
         background-image: none;
@@ -223,6 +249,10 @@
     .db-section >.content-image >.image {
         width: 100%;
     }
+    .db-section >.image-text >.image {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 426px) {
@@ -246,5 +276,9 @@
     }
     .db-section >.image-form >.form >.title {
         font-size: calc(var(--db-font-size-base) + 20px);
+    }
+    .db-section >.image-text >.image {
+        width: 250px;
+        height: 250px;
     }
 }
