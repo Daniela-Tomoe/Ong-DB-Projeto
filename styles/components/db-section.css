@@ -113,6 +113,71 @@
     align-self: center;
 }
 
+.db-section >.image-form {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.db-section >.image-form >.image {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.db-section >.image-form >.image >img {
+    width: 100%;
+}
+
+.db-section >.image-form >.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    font-size: calc(var(--db-font-size-base) - 3px);
+    font-family: var(--db-font-family-text);
+    color: var(--db-color-gray);
+    padding: 0 20px;
+}
+
+.db-section >.image-form >.form .primary-color {
+    color: var(--db-color-primary);
+}
+
+.db-section >.image-form >.form .primary-color-dark {
+    color: var(--db-color-primary-dark);
+}
+
+.db-section >.image-form >.form >.title {
+    text-align: start;
+    font-family: var(--db-font-family-title);
+    font-size: calc(var(--db-font-size-base) + 25px);
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.db-section >.image-form >.form >.donation-value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.db-section >.image-form >.form >.donation-value >.title {
+    margin-bottom: 5px;
+}
+
+.db-section >.image-form >.form >.donation-value >.money {
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.db-section >.image-form >.form >button {
+    align-self: flex-start;
+}
 
 @media (max-width: 768px) {
     .db-section.-with-bg-bones {
@@ -166,5 +231,14 @@
     }
     .db-section >.content-image {
         padding: 20px;
+    }
+    .db-section >.image-form >.image {
+        display: none;
+    }
+    .db-section >.image-form >.form {
+        width: 100%;
+    }
+    .db-section >.image-form >.form >.title {
+        font-size: calc(var(--db-font-size-base) + 20px);
     }
 }

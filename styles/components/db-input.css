@@ -1,0 +1,9 @@
+.db-input {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 2rem;
+    background-color: var(--db-color-beige-dark);
+    border: 1px solid var(--db-color-primary);
+    margin-top: 5px;
+}

@@ -23,6 +23,7 @@
 .db-header a {
     background-color: transparent;
     border: none;
+    text-decoration: none;
     height: 100%;
     padding: 0 20px;
     color: white;
@@ -38,7 +39,7 @@
     background-color: var(--db-color-primary-dark);
 }
 
-.db-header .home.-active {
+.db-header .-active {
     background-color: var(--db-color-primary-dark);
 }
 

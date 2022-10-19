@@ -32,10 +32,6 @@
     max-width: 840px;
 }
 
-.db-home >.map {
-    border-top: 8px solid var(--db-color-primary);
-}
-
 @media (max-width: 768px) {
     .db-home >.db-arrow-back {
         display: none;

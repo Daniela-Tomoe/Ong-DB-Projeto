@@ -1,7 +1,0 @@
-.db-donation >.db-section.donation {
-    position: relative;
-}
-
-.db-donation >.map {
-    border-top: 8px solid var(--db-color-primary);
-}

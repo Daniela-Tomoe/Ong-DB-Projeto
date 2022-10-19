@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="styles/components/db-icon-button.css">
     <link rel="stylesheet" href="styles/components/db-arrow-back.css">
     <link rel="stylesheet" href="styles/components/db-input.css">
+    <link rel="stylesheet" href="styles/components/db-map.css">
 
     <!--PAGES-->
     <link rel="stylesheet" href="styles/pages/db-donation.css">
@@ -57,14 +58,14 @@
     <main class="db-donation">
         <header class="db-header">
             <div class="wrapper">
-                <a class="home -active">Home</a>
+                <a href="db-home.html" class="home">Home</a>
                 <img src="assets/img/logo.png" alt="Logo da ONG DB" class="logo">
-                <a class="donation">Faça já sua doação!</a>
+                <a href="db-donation1.html" class="donation -active">Faça já sua doação!</a>
                 <a class="menu"><i class="fa-solid fa-bars"></i></a>
             </div>
             <nav class="nav-menu -active">
-                <a class="home -active">Home</a>
-                <a class="donation">Faça já sua doação!</a>
+                <a href="db-home.html" class="home">Home</a>
+                <a href="db-donation1.html" class="donation -active">Faça já sua doação!</a>
             </nav>
         </header>
         <div class="db-arrow-back">
@@ -78,27 +79,27 @@
                 <form class="form">
                     <h1 class="title">
                         <span>Sua doação irá mudar vidas!</span>
-                        <span>(Passo 1 de 2)</span>
+                        <span class="primary-color">(Passo 1 de 2)</span>
                     </h1>
-                    <label for="name">Nome<span>*</span></label>
+                    <label for="name">Nome<span class="primary-color">*</span></label>
                     <input type="text" class="db-input" id="name" required>
-                    <label for="email">Email<span>*</span></label>
+                    <label for="email">Email<span class="primary-color">*</span></label>
                     <input type="email" class="db-input" id="email" required>
                     <label for="anniversary">Data de aniversário</label>
                     <input type="date" class="db-input" id="anniversary" required>
-                    <div class="donation">
-                        <span for="money">Valor para doação</span>
+                    <div class="donation-value">
+                        <h2 class="title">Valor para doação</h2>
                         <div class="money">
-                            <button><i class="fa-solid fa-minus"></i></i></button>
-                            <span>R$ 10,00</span>
-                            <button><i class="fa-solid fa-plus"></button>
+                            <button class="db-button -money"><i class="fa-solid fa-minus"></i></button>
+                            <span class="primary-color-dark">R$ 10,00</span>
+                            <button class="db-button -money"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                    <button>Avançar</button>
+                    <button class="db-button">Avançar</button>
                 </form>
             </div>
         </section>
-        <section class="map">
+        <section class="db-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1401.953563499227!2d-46.69590555813838!3d-23.60565339395464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1665765094530!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <footer class="db-footer">
