@@ -2,6 +2,6 @@
     display: none;
 }
 
-.db-accordion.-open >.description {
+.db-accordion>.description.-open {
     display: block;
 }
