@@ -1,3 +1,7 @@
 .db-accordion >.description {
     display: none;
 }
+
+.db-accordion.-open >.description {
+    display: block;
+}
