@@ -51,7 +51,7 @@
     <!--TRUMPS-->
 
     <!-- Javascript -->
-    <script src="js/db-donation.js" defer></script>
+    <script src="js/donation-btn.js" defer></script>
 
 </head>
 <body id="top">
@@ -90,9 +90,9 @@
                     <div class="donation-value">
                         <h2 class="title">Valor para doação</h2>
                         <div class="money">
-                            <button class="db-button -money"><i class="fa-solid fa-minus"></i></button>
-                            <span class="primary-color-dark value">R$ 10,00</span>
-                            <button class="db-button -money"><i class="fa-solid fa-plus"></i></button>
+                            <button id="minus" class="db-button -money" type="button"><i class="fa-solid fa-minus"></i></button>
+                            <span class="primary-color-dark">R$ <span id="value">10</span></span>
+                            <button id="plus" class="db-button -money" type="button"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                     <button class="db-button">Avançar</button>
