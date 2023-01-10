@@ -51,6 +51,7 @@
     <!--TRUMPS-->
 
     <!-- Javascript -->
+    <script src="js/input-validation.js" defer></script>
     <script src="js/donation-btn.js" defer></script>
 
 </head>
@@ -71,34 +72,83 @@
         <div class="db-arrow-back">
             <a href="#top" class="back-to-top"><i class="fa-solid fa-angle-down"></i></a>
         </div>
-        <section class="db-section donation">
-            <div class="image-form">
-                <div class="image">
-                    <img src="assets/img/dog.png" alt="Imagem de cachorro caramelo">
-                </div>
-                <form class="form">
-                    <h1 class="title">
-                        <span>Sua doação irá mudar vidas!</span>
-                        <span class="primary-color">(Passo 1 de 2)</span>
-                    </h1>
-                    <label for="name">Nome<span class="primary-color">*</span></label>
-                    <input type="text" class="db-input" id="name" required>
-                    <label for="email">Email<span class="primary-color">*</span></label>
-                    <input type="email" class="db-input" id="email" required>
-                    <label for="anniversary">Data de aniversário</label>
-                    <input type="date" class="db-input" id="anniversary" required>
-                    <div class="donation-value">
-                        <h2 class="title">Valor para doação</h2>
-                        <div class="money">
-                            <button id="minus" class="db-button -money" type="button"><i class="fa-solid fa-minus"></i></button>
-                            <span class="primary-color-dark">R$ <span id="value">10</span></span>
-                            <button id="plus" class="db-button -money" type="button"><i class="fa-solid fa-plus"></i></button>
-                        </div>
+        <div id="first-step" class="container">
+            <section class="db-section donation">
+                <div class="image-form">
+                    <div class="image">
+                        <img src="assets/img/dog.png" alt="Imagem de cachorro caramelo">
                     </div>
-                    <button class="db-button">Avançar</button>
-                </form>
-            </div>
-        </section>
+                    <form class="form">
+                        <h1 class="title">
+                            <span>Sua doação irá mudar vidas!</span>
+                            <span class="primary-color">(Passo 1 de 2)</span>
+                        </h1>
+                        <label for="name">Nome<span class="primary-color">*</span></label>
+                        <input type="text" class="db-input" id="name" required>
+                        <label for="email">Email<span class="primary-color">*</span></label>
+                        <input type="email" class="db-input" id="email" required>
+                        <label for="anniversary">Data de aniversário</label>
+                        <input type="date" class="db-input" id="anniversary" required>
+                        <div class="donation-value">
+                            <h2 class="title">Valor para doação</h2>
+                            <div class="money">
+                                <button id="minus" class="db-button -money" type="button"><i class="fa-solid fa-minus"></i></button>
+                                <span class="primary-color-dark">R$ <span id="value">10</span></span>
+                                <button id="plus" class="db-button -money" type="button"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <button class="db-button">Avançar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div id="second-step" class="container -hide">
+            <section class="db-section donation">
+                <div class="image-form">
+                    <div class="image">
+                        <img src="assets/img/dog.png" alt="Imagem de cachorro caramelo">
+                    </div>
+                    <form class="form">
+                        <h1 class="title">
+                            <span>Sua doação irá mudar vidas!</span>
+                            <span class="primary-color">(Passo 2 de 2)</span>
+                        </h1>
+                        <label for="card-number">Número do cartão</label>
+                        <input type="text" inputmode="numeric" class="db-input" id="card-number" required>
+                        <label for="card-name">Nome impresso no cartão<span class="primary-color">*</span></label>
+                        <input type="text" class="db-input" id="card-name" required>
+                        <div class="card-info">
+                            <div class="info due-date">
+                                <label for="due-date">Vencimento MM/AA</label>
+                                <input type="text" class="db-input" id="due-date" required>
+                            </div>
+                            <div class="info cvv">
+                                <label for="cvv">CVV</label>
+                                <input type="text" class="db-input" id="cvv" inputmode="numeric" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="donation-value">
+                            <h2 class="title">Confirmar valor para doação</h2>
+                            <span class="primary-color-dark value">R$ 10,00</span>
+                        </div>
+                        <button class="db-button">Concluir e pagar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div id="final-step" class="container -hide">
+            <section class="db-section donation">
+                <div class="image-text">
+                    <div class="image">
+                    </div>
+                    <div class="text">
+                        <p class="text">Pagamento feito com sucesso!</p>
+                        <p class="text">Você ajudou a alimentar <span>10</span> doguinhos nas ruas!</p>
+                        <p class="text primary-color-dark">Os doguinhos agradecem!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
         <section class="db-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1401.953563499227!2d-46.69590555813838!3d-23.60565339395464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1665765094530!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
