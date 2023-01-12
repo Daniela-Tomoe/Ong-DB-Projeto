@@ -114,23 +114,27 @@ form2.addEventListener('submit', (e) => {
     confirmBtn.addEventListener('click', finalStep())
 })
 
-function checkCardNumber (value) {
-    value.length = 16;
-    return true;
+function checkCardNumber (cnumber) {
+    const length = cnumber.length;
+    if (length == 16) {
+        return true;
+    };
 }
 
-function dueDateValidation (value) {
+function dueDateValidation (date) {
     const dateRegex = new RegExp (
         /^[0-9]{2}\/[0-9]{2}$/
     )
-    if (dateRegex.test(value)) {
+    if (dateRegex.test(date)) {
         return true
     }
 }
 
 function checkCvv (value) {
-    value.length = 3;
-    return true;
+    const length = value.length;
+    if (length == 3) {
+        return true;
+    };
 }
 
 function finalStep () {
