@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cópia ONG DB Doações - Faça sua doação</title>
+    <title>ONG DB Doações - Faça sua doação</title>
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +72,7 @@
         <div class="db-arrow-back">
             <a href="#top" class="back-to-top"><i class="fa-solid fa-angle-down"></i></a>
         </div>
-        <div id="first-step" class="container">
+        <div id="first-step" class="container -hide">
             <section class="db-section donation">
                 <div class="image-form">
                     <div class="image">
@@ -102,36 +102,36 @@
                 </div>
             </section>
         </div>
-        <div id="second-step" class="container -hide">
+        <div id="second-step" class="container">
             <section class="db-section donation">
                 <div class="image-form">
                     <div class="image">
                         <img src="assets/img/dog.png" alt="Imagem de cachorro caramelo">
                     </div>
-                    <form class="form">
+                    <form id="form2" class="form">
                         <h1 class="title">
                             <span>Sua doação irá mudar vidas!</span>
                             <span class="primary-color">(Passo 2 de 2)</span>
                         </h1>
                         <label for="card-number">Número do cartão</label>
-                        <input type="text" inputmode="numeric" class="db-input" id="card-number" required>
+                        <input type="number" class="db-input" id="card-number">
                         <label for="card-name">Nome impresso no cartão<span class="primary-color">*</span></label>
-                        <input type="text" class="db-input" id="card-name" required>
+                        <input type="text" class="db-input" id="card-name">
                         <div class="card-info">
                             <div class="info due-date">
                                 <label for="due-date">Vencimento MM/AA</label>
-                                <input type="text" class="db-input" id="due-date" required>
+                                <input type="text" class="db-input" id="due-date">
                             </div>
                             <div class="info cvv">
                                 <label for="cvv">CVV</label>
-                                <input type="text" class="db-input" id="cvv" inputmode="numeric" maxlength="3">
+                                <input type="number" class="db-input" id="cvv">
                             </div>
                         </div>
                         <div class="donation-value">
                             <h2 class="title">Confirmar valor para doação</h2>
-                            <span class="primary-color-dark value">R$ 10,00</span>
+                            <span class="primary-color-dark value">R$ <span id="value-confirmation">10</span></span>
                         </div>
-                        <button class="db-button">Concluir e pagar</button>
+                        <button id="confirm-btn" class="db-button">Concluir e pagar</button>
                     </form>
                 </div>
             </section>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="text">
                         <p class="text">Pagamento feito com sucesso!</p>
-                        <p class="text">Você ajudou a alimentar <span>10</span> doguinhos nas ruas!</p>
+                        <p class="text">Você ajudou a alimentar <span id="dog-number">1</span> doguinhos nas ruas!</p>
                         <p class="text primary-color-dark">Os doguinhos agradecem!</p>
                     </div>
                 </div>
