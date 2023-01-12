@@ -2,7 +2,6 @@
     position: fixed;
     right: 5%;
     bottom: 10%;
-    width: fit-content;
     z-index: 3;
     background-color: var(--db-color-primary-dark);
     border: none;

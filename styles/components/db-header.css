@@ -1,5 +1,6 @@
 .db-header {
     width: 100vw;
+    max-width: 100%;
     height: var(--db-header-height);
     background-color: var(--db-color-primary);
     position: fixed;

@@ -11,6 +11,9 @@ function validationFirstStep() {
     if (!nameInput.value) {
         alert('Favor preencher seu nome.');
         return;
+    } if (!nameValidation(nameInput.value)) {
+        alert('Favor preencher seu nome corretamente.');
+        return;
     }
 
     if (!emailInput.value) {
@@ -32,10 +35,17 @@ function validationFirstStep() {
     nextPage();
 }
 
+function nameValidation(name) {
+    const regex = /^([a-zA-Z]+\s)+[a-zA-Z]+$/;
+
+    if (regex.test(name)) {
+        return true
+    }
+}
+
 function emailValidation(email) {
-    const emailRegex = new RegExp (
-        /^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/
-    )
+    const emailRegex = /^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/;
+
     if (emailRegex.test(email)) {
         return true
     }
@@ -65,7 +75,7 @@ const dueDateInput = document.querySelector('#due-date');
 const cvvInput = document.querySelector('#cvv');
 
 function validCardNumber() {
-    cardNumberInput.value = cardNumberInput.value.replace(/[^0-9]g, ""/);
+    cardNumberInput.value = cardNumberInput.value.replace(/[^0-9]g, ""/).slice(0, 16);
 }
 
 function validCvvNumber() {
@@ -83,6 +93,9 @@ function validationFinalStep() {
 
     if (!cardNameInput.value) {
         alert('Favor preencher o nome impresso no cartão.');
+        return;
+    } if (!nameValidation(cardNameInput.value)) {
+        alert('Favor preencher o nome impresso no cartão corretamente.');
         return;
     }
 
@@ -113,12 +126,20 @@ function checkCardNumber (cnumber) {
 }
 
 function dueDateValidation (date) {
-    const dateRegex = new RegExp (
-        /^[0-9]{2}\/[0-9]{2}$/
-    )
-    if (dateRegex.test(date)) {
-        return true
+    const dateRegex = /^(0[1-9]|1[0-2])\/(1[9]|2[0-9]|3[0-9])$/;
+    const currentYear = new Date().getFullYear;
+    const currentMonth = new Date().getMonth;
+
+    if (!dateRegex.test(date)) {
+        return false;
     }
+
+    const [month, year] = date.split('/');
+    
+    if (year < currentYear.toString().slice(-2) || (year === currentYear.toString().slice(-2) && month <= currentMonth + 1)) {
+        return false;
+    }
+    return true;
 }
 
 function checkCvv (value) {
