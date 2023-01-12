@@ -23,3 +23,7 @@ minusBtn.addEventListener('click', () => {
         numberOfDogs.textContent = newNumber / 10;
     }
 })
+
+const map = document.querySelector('.db-map');
+const position = map.getBoundingClientRect().top;
+console.log(position)

@@ -34,9 +34,9 @@
 }
 
 @media (max-width: 768px) {
-    .db-home >.db-arrow-back {
+    /* .db-home >.db-arrow-back {
         display: none;
-    }
+    } */
     .db-home >.greetings-wrapper >video{
         width: 100%;
         height: 100%;

@@ -25,3 +25,7 @@
     background-color: var(--db-color-secondary);
     cursor: pointer;
 }
+
+.db-arrow-back.-hide {
+    display: none;
+}
