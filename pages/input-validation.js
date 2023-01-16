@@ -1,4 +1,4 @@
-// First step
+// Donation first step
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const birthDateInput = document.querySelector('#birthdate');
@@ -7,11 +7,65 @@ const firstStep = document.querySelector('#first-step');
 const secondStep = document.querySelector('#second-step');
 const finalPage = document.querySelector('#final-page');
 
+const validators = {
+    nameValidation: (name) => new RegExp(/^([a-zA-Z]+\s)+[a-zA-Z]+$/).test(name),
+    emailValidation: (email) => new RegExp(/^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/).test(email),
+}
+
+// function checkAge(birthdate) {
+//     var today = new Date();
+//     var birthdate = new Date(birthdate);
+//     var age = today.getFullYear() - birthdate.getFullYear();
+//     var m = today.getMonth() - birthdate.getMonth();
+//     if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+//       age--;
+//     }
+//     if (age >= 18) {
+//       return true;
+//     }
+// }
+
+
+
+function checkAge(birthdate) {
+    var age = new Date().getFullYear() - new Date(birthdate).getFullYear();
+    var m = new Date().getMonth() - new Date(birthdate).getMonth();
+    if (m<0 || (m === 0 && new Date().getDate() < new Date(birthdate).getDate())) {
+        age--;
+    }
+    if (age >= 18) {
+        return true
+    }
+}
+
+
+
+
+function checkAge(birthdate) {
+    var m = new Date().getMonth() - new Date(birthdate).getMonth();
+    if (m<0 || (m === 0 && new Date().getDate() < new Date(birthdate).getDate())) {
+        new Date().getFullYear() - new Date(birthdate).getFullYear() - 1;
+    }
+    if (new Date().getFullYear() - new Date(birthdate).getFullYear() >= 18) {
+        return true
+    }
+}
+
+
+
+
+
+
+function nextPage() {
+    firstStep.classList.add('-hide');
+    secondStep.classList.remove('-hide');
+}
+
 function validationFirstStep() {
     if (!nameInput.value) {
         alert('Favor preencher seu nome.');
         return;
-    } if (!nameValidation(nameInput.value)) {
+    } if (!validators.nameValidation(nameInput.value)) {
         alert('Favor preencher seu nome corretamente.');
         return;
     }
@@ -19,7 +73,7 @@ function validationFirstStep() {
     if (!emailInput.value) {
         alert('Favor preencher o email.');
         return;
-    } if (!emailValidation(emailInput.value)) {
+    } if (!validators.emailValidation(emailInput.value)) {
         alert('Favor preencher o email corretamente.');
         return;
     }
@@ -35,40 +89,7 @@ function validationFirstStep() {
     nextPage();
 }
 
-function nameValidation(name) {
-    const regex = /^([a-zA-Z]+\s)+[a-zA-Z]+$/;
-
-    if (regex.test(name)) {
-        return true
-    }
-}
-
-function emailValidation(email) {
-    const emailRegex = /^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/;
-
-    if (emailRegex.test(email)) {
-        return true
-    }
-}
-
-function checkAge(birthdate) {
-    var today = new Date();
-    var birthdate = new Date(birthdate);
-    var age = today.getFullYear() - birthdate.getFullYear();
-    var m = today.getMonth() - birthdate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
-      age--;
-    }
-    if (age >= 18) {
-      return true;
-    }}
-
-function nextPage() {
-    firstStep.classList.add('-hide');
-    secondStep.classList.remove('-hide');
-}
-
-// Second step
+// Donation final step
 const cardNumberInput = document.querySelector('#card-number');
 const cardNameInput = document.querySelector('#card-name');
 const dueDateInput = document.querySelector('#due-date');

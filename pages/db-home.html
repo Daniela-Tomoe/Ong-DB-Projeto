@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="/styles/components/db-header.css">
     <link rel="stylesheet" href="/styles/components/db-section.css">
     <link rel="stylesheet" href="/styles/components/db-icon-button.css">
-    <link rel="stylesheet" href="/styles/components/db-arrow-back.css">
+    <link rel="stylesheet" href="/styles/components/db-scroll-to-top.css">
     <link rel="stylesheet" href="/styles/components/db-map.css">
 
     <!--PAGES-->
@@ -54,12 +54,12 @@
     <link rel="stylesheet" href="/styles/trumps/hide.css">
 
     <!-- SCRIPTS -->
-    <script src="/js/scroll-back.js" defer></script>
+    <script src="/js/scroll-to-top.js" defer></script>
     <script src="/js/menu-btn.js" defer></script>
     <script src="/js/accordeon.js" defer></script>
 
 </head>
-<body id="top">
+<body>
     <main class="db-home">
         <header class="db-header">
             <div class="wrapper">
@@ -73,8 +73,8 @@
                 <a href="db-donation.html" class="donation">Faça já sua doação!</a>
             </nav>
         </header>
-        <div class="db-arrow-back -hide">
-            <a href="#top" class="back-to-top" onclick="backToTop()"><i class="fa-solid fa-angle-down"></i></a>
+        <div>
+            <a class="db-scroll-to-top -hide" onclick="backToTop()"><i class="fa-solid fa-angle-down"></i></a>
         </div>
         <section class="greetings-wrapper">
             <video autoplay loop muted>

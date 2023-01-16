@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="/styles/components/db-header.css">
     <link rel="stylesheet" href="/styles/components/db-section.css">
     <link rel="stylesheet" href="/styles/components/db-icon-button.css">
-    <link rel="stylesheet" href="/styles/components/db-arrow-back.css">
+    <link rel="stylesheet" href="/styles/components/db-scroll-to-top.css">
     <link rel="stylesheet" href="/styles/components/db-input.css">
     <link rel="stylesheet" href="/styles/components/db-map.css">
 
@@ -52,13 +52,13 @@
     <link rel="stylesheet" href="/styles/trumps/hide.css">
 
     <!-- Javascript -->
-    <script src="/js/scroll-back.js" defer></script>
+    <script src="/js/scroll-to-top.js" defer></script>
     <script src="/js/menu-btn.js" defer></script>
     <script src="input-validation.js" defer></script>
     <script src="donation-btn.js" defer></script>
 
 </head>
-<body id="top">
+<body>
     <main class="db-donation">
         <header class="db-header">
             <div class="wrapper">
@@ -72,8 +72,8 @@
                 <a href="db-donation.html" class="donation">Faça já sua doação!</a>
             </nav>
         </header>
-        <div class="db-arrow-back -hide">
-            <a href="#top" class="back-to-top"><i class="fa-solid fa-angle-down" onclick="backToTop()"></i></a>
+        <div>
+            <a class="db-scroll-to-top -hide" onclick="backToTop()"><i class="fa-solid fa-angle-down"></i></a>
         </div>
         <div id="first-step" class="container">
             <section class="db-section donation">
