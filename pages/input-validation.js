@@ -12,6 +12,8 @@ const finalPage = document.querySelector('#final-page');
 const validators = {
     nameValidation: (name) => new RegExp(/^([a-zA-Z]+\s)+[a-zA-Z]+$/).test(name),
     emailValidation: (email) => new RegExp(/^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/).test(email),
+    cardNumberValidation: (number) => number.length == 16,
+    cvvValidation: (value) => value.length == 3,
 }
 
 function checkAge(birthdate) {
@@ -76,12 +78,34 @@ function validCvvNumber() {
     cvvInput.value = cvvInput.value.replace(/[^0-9]g, ""/).slice(0, 3);
 }
 
+function dueDateValidation (date) {
+    const dateRegex = /^(0[1-9]|1[0-2])\/(2[3-9]|3[0-9])$/;
+    const currentYear = new Date().getFullYear;
+    const currentMonth = new Date().getMonth;
+
+    if (!dateRegex.test(date)) {
+        return false;
+    }
+
+    const [month, year] = date.split('/');
+    
+    if (year < currentYear.toString().slice(-2) || (year === currentYear.toString().slice(-2) && month <= currentMonth + 1)) {
+        return false;
+    }
+    return true;
+}
+
+function finalStep () {
+    secondStep.classList.add('-hide');
+    finalPage.classList.remove('-hide');
+}
+
 function validationFinalStep() {
     if (!cardNumberInput.value) {
         alert('Favor preencher o número de seu cartão.');
         return;
-    } if (!checkCardNumber(cardNumberInput.value)) {
-        alert('Favor preencher o número de seu cartão corretamente');
+    } if (!validators.cardNumberValidation(cardNumberInput.value)) {
+        alert('Favor preencher o número de seu cartão corretamente.');
         return;
     }
 
@@ -104,46 +128,10 @@ function validationFinalStep() {
     if (!cvvInput.value) {
         alert('Favor preencher o cvv do cartão.');
         return;
-    } if (!checkCvv(cvvInput.value)) {
+    } if (!validators.cvvValidation(cvvInput.value)) {
         alert('Favor preencher o cvv do cartão corretamente.');
         return;
     };
 
     finalStep();
-}
-
-function checkCardNumber (cnumber) {
-    const length = cnumber.length;
-    if (length == 16) {
-        return true;
-    };
-}
-
-function dueDateValidation (date) {
-    const dateRegex = /^(0[1-9]|1[0-2])\/(1[9]|2[0-9]|3[0-9])$/;
-    const currentYear = new Date().getFullYear;
-    const currentMonth = new Date().getMonth;
-
-    if (!dateRegex.test(date)) {
-        return false;
-    }
-
-    const [month, year] = date.split('/');
-    
-    if (year < currentYear.toString().slice(-2) || (year === currentYear.toString().slice(-2) && month <= currentMonth + 1)) {
-        return false;
-    }
-    return true;
-}
-
-function checkCvv (value) {
-    const length = value.length;
-    if (length == 3) {
-        return true;
-    };
-}
-
-function finalStep () {
-    secondStep.classList.add('-hide');
-    finalPage.classList.remove('-hide');
 }

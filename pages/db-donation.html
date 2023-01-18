@@ -87,7 +87,7 @@
                             <span class="primary-color">(Passo 1 de 2)</span>
                         </h1>
                         <label for="name">Nome<span class="primary-color">*</span></label>
-                        <input type="text" class="db-input" id="name">
+                        <input class="db-input" id="name">
                         <label for="email">Email<span class="primary-color">*</span></label>
                         <input type="email" class="db-input" id="email">
                         <label for="birthdate">Data de nascimento</label>
@@ -95,9 +95,9 @@
                         <div class="donation-value">
                             <h2 class="title">Valor para doação</h2>
                             <div class="money">
-                                <button id="minus" class="db-button -money" type="button" onclick="minusBtn()"><i class="fa-solid fa-minus"></i></button>
+                                <button id="minus" class="db-button -money" type="button" onclick="donationHandler('minus')"><i class="fa-solid fa-minus"></i></button>
                                 <span class="primary-color-dark">R$ <span id="value">10</span></span>
-                                <button id="plus" class="db-button -money" type="button" onclick="plusBtn()"><i class="fa-solid fa-plus"></i></button>
+                                <button id="plus" class="db-button -money" type="button" onclick="donationHandler('plus')"><i class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>
                         <button id="next-btn" class="db-button" onclick="validationFirstStep()" type="button">Avançar</button>
@@ -119,11 +119,11 @@
                         <label for="card-number">Número do cartão</label>
                         <input type="number" class="db-input" id="card-number" oninput="validCardNumber()">
                         <label for="card-name">Nome impresso no cartão<span class="primary-color">*</span></label>
-                        <input type="text" class="db-input" id="card-name">
+                        <input class="db-input" id="card-name">
                         <div class="card-info">
                             <div class="info due-date">
                                 <label for="due-date">Vencimento MM/AA</label>
-                                <input type="text" class="db-input" id="due-date">
+                                <input class="db-input" id="due-date">
                             </div>
                             <div class="info cvv">
                                 <label for="cvv">CVV</label>
