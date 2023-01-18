@@ -1,4 +1,6 @@
 // Donation first step
+const donationPlural = document.querySelector('#plural');
+
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const birthDateInput = document.querySelector('#birthdate');
@@ -12,21 +14,6 @@ const validators = {
     emailValidation: (email) => new RegExp(/^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/).test(email),
 }
 
-// function checkAge(birthdate) {
-//     var today = new Date();
-//     var birthdate = new Date(birthdate);
-//     var age = today.getFullYear() - birthdate.getFullYear();
-//     var m = today.getMonth() - birthdate.getMonth();
-//     if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
-//       age--;
-//     }
-//     if (age >= 18) {
-//       return true;
-//     }
-// }
-
-
-
 function checkAge(birthdate) {
     var age = new Date().getFullYear() - new Date(birthdate).getFullYear();
     var m = new Date().getMonth() - new Date(birthdate).getMonth();
@@ -38,27 +25,13 @@ function checkAge(birthdate) {
     }
 }
 
-
-
-
-function checkAge(birthdate) {
-    var m = new Date().getMonth() - new Date(birthdate).getMonth();
-    if (m<0 || (m === 0 && new Date().getDate() < new Date(birthdate).getDate())) {
-        new Date().getFullYear() - new Date(birthdate).getFullYear() - 1;
-    }
-    if (new Date().getFullYear() - new Date(birthdate).getFullYear() >= 18) {
-        return true
-    }
-}
-
-
-
-
-
-
 function nextPage() {
     firstStep.classList.add('-hide');
     secondStep.classList.remove('-hide');
+    
+    if (minimunPrice != 10) {
+        donationPlural.classList.remove('-hide');
+    }
 }
 
 function validationFirstStep() {
@@ -115,7 +88,7 @@ function validationFinalStep() {
     if (!cardNameInput.value) {
         alert('Favor preencher o nome impresso no cartão.');
         return;
-    } if (!nameValidation(cardNameInput.value)) {
+    } if (!validators.nameValidation(cardNameInput.value)) {
         alert('Favor preencher o nome impresso no cartão corretamente.');
         return;
     }

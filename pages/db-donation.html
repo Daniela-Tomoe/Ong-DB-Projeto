@@ -95,9 +95,9 @@
                         <div class="donation-value">
                             <h2 class="title">Valor para doação</h2>
                             <div class="money">
-                                <button id="minus" class="db-button -money" type="button"><i class="fa-solid fa-minus"></i></button>
+                                <button id="minus" class="db-button -money" type="button" onclick="minusBtn()"><i class="fa-solid fa-minus"></i></button>
                                 <span class="primary-color-dark">R$ <span id="value">10</span></span>
-                                <button id="plus" class="db-button -money" type="button"><i class="fa-solid fa-plus"></i></button>
+                                <button id="plus" class="db-button -money" type="button" onclick="plusBtn()"><i class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>
                         <button id="next-btn" class="db-button" onclick="validationFirstStep()" type="button">Avançar</button>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="text">
                         <p class="text">Pagamento feito com sucesso!</p>
-                        <p class="text">Você ajudou a alimentar <span id="dog-number">1</span> <span id="singular" class="inflection -hide">doguinho</span><span id="plural" class="inflection -hide">doguinhos</span> nas ruas!</p>
+                        <p class="text">Você ajudou a alimentar <span id="dog-number">1</span> doguinho</span><span id="plural" class="-hide">s</span> nas ruas!</p>
                         <p class="text primary-color-dark">Os doguinhos agradecem!</p>
                     </div>
                 </div>
