@@ -75,7 +75,7 @@
         <div>
             <a class="db-scroll-to-top -hide" onclick="backToTop()"><i class="fa-solid fa-angle-down"></i></a>
         </div>
-        <div id="first-step" class="container">
+        <div id="first-step" class="container -hide">
             <section class="db-section donation">
                 <div class="image-form">
                     <div class="image">
@@ -105,7 +105,7 @@
                 </div>
             </section>
         </div>
-        <div id="second-step" class="container -hide">
+        <div id="second-step" class="container">
             <section class="db-section donation">
                 <div class="image-form">
                     <div class="image">
@@ -117,17 +117,17 @@
                             <span class="primary-color">(Passo 2 de 2)</span>
                         </h1>
                         <label for="card-number">Número do cartão</label>
-                        <input type="number" class="db-input" id="card-number" oninput="validCardNumber()">
+                        <input type="number" class="db-input" id="card-number" oninput="allowedCardNumber()">
                         <label for="card-name">Nome impresso no cartão<span class="primary-color">*</span></label>
                         <input class="db-input" id="card-name">
                         <div class="card-info">
                             <div class="info due-date">
                                 <label for="due-date">Vencimento MM/AA</label>
-                                <input class="db-input" id="due-date">
+                                <input class="db-input" id="due-date" oninput="allowedDueDate()">
                             </div>
                             <div class="info cvv">
                                 <label for="cvv">CVV</label>
-                                <input type="number" class="db-input" id="cvv" oninput="validCvvNumber()">
+                                <input type="number" class="db-input" id="cvv" oninput="allowedCvvNumber()">
                             </div>
                         </div>
                         <div class="donation-value">

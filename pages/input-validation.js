@@ -14,17 +14,16 @@ const validators = {
     emailValidation: (email) => new RegExp(/^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}/).test(email),
     cardNumberValidation: (number) => number.length == 16,
     cvvValidation: (value) => value.length == 3,
+    dueDateValidation: (date) => new RegExp(/^(0[1-9]|1[0-2])\/(2[0-9]|3[0-9])$/).test(date),
 }
 
-function checkAge(birthdate) {
-    var age = new Date().getFullYear() - new Date(birthdate).getFullYear();
-    var m = new Date().getMonth() - new Date(birthdate).getMonth();
-    if (m<0 || (m === 0 && new Date().getDate() < new Date(birthdate).getDate())) {
-        age--;
-    }
-    if (age >= 18) {
-        return true
-    }
+function isBirthdateHigherThanMinimunAge(birthdate, minimunAge) {
+    const today = new Date();
+    const bDate = new Date(birthdate);
+    let age = today.getFullYear() - bDate.getFullYear();
+    if (today.getMonth() - bDate.getMonth() < 0 || today.getMonth() - bDate.getMonth() === 0 && today.getDate() < bDate.getDate) age--;
+
+    return age >= minimunAge;
 }
 
 function nextPage() {
@@ -56,7 +55,7 @@ function validationFirstStep() {
     if (!birthDateInput.value) {
         alert('Favor preencher sua data de nascimento.')
         return;
-    } if (!checkAge(birthDateInput.value)) {
+    } if (!isBirthdateHigherThanMinimunAge(birthDateInput.value, 18)) {
         alert('É necessário ser maior de 18 anos para doar.');
         return;
     }
@@ -70,29 +69,25 @@ const cardNameInput = document.querySelector('#card-name');
 const dueDateInput = document.querySelector('#due-date');
 const cvvInput = document.querySelector('#cvv');
 
-function validCardNumber() {
-    cardNumberInput.value = cardNumberInput.value.replace(/[^0-9]g, ""/).slice(0, 16);
+function allowedCardNumber() {
+    cardNumberInput.value = cardNumberInput.value.replace(/[^0-9]/g, "").slice(0, 16);
 }
 
-function validCvvNumber() {
-    cvvInput.value = cvvInput.value.replace(/[^0-9]g, ""/).slice(0, 3);
+function allowedDueDate() {
+    dueDateInput.value = dueDateInput.value.replace(/[^0-9/]/g, "").slice(0, 5);
 }
 
-function dueDateValidation (date) {
-    const dateRegex = /^(0[1-9]|1[0-2])\/(2[3-9]|3[0-9])$/;
-    const currentYear = new Date().getFullYear;
-    const currentMonth = new Date().getMonth;
+function allowedCvvNumber() {
+    cvvInput.value = cvvInput.value.replace(/[^0-9]/g, "").slice(0, 3);
+}
 
-    if (!dateRegex.test(date)) {
-        return false;
-    }
+function isDueDateExpired(date) {
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth();
 
     const [month, year] = date.split('/');
     
-    if (year < currentYear.toString().slice(-2) || (year === currentYear.toString().slice(-2) && month <= currentMonth + 1)) {
-        return false;
-    }
-    return true;
+    if (year < currentYear.toString().slice(-2) || (year === currentYear.toString().slice(-2) && month < currentMonth)) return true;
 }
 
 function finalStep () {
@@ -104,7 +99,8 @@ function validationFinalStep() {
     if (!cardNumberInput.value) {
         alert('Favor preencher o número de seu cartão.');
         return;
-    } if (!validators.cardNumberValidation(cardNumberInput.value)) {
+    } 
+    if (!validators.cardNumberValidation(cardNumberInput.value)) {
         alert('Favor preencher o número de seu cartão corretamente.');
         return;
     }
@@ -112,7 +108,8 @@ function validationFinalStep() {
     if (!cardNameInput.value) {
         alert('Favor preencher o nome impresso no cartão.');
         return;
-    } if (!validators.nameValidation(cardNameInput.value)) {
+    } 
+    if (!validators.nameValidation(cardNameInput.value)) {
         alert('Favor preencher o nome impresso no cartão corretamente.');
         return;
     }
@@ -120,15 +117,21 @@ function validationFinalStep() {
     if(!dueDateInput.value) {
         alert('Favor preencher o vencimento do cartão.');
         return;
-    } if (!dueDateValidation(dueDateInput.value)) {
-        alert('Favor preencher o vencimento do cartão corretamente.');
+    } 
+    if (!validators.dueDateValidation(dueDateInput.value)) {
+        alert('Favor preencher o vencimento do cartão corretamente. MM/AA');
+        return;
+    }
+    if (isDueDateExpired(dueDateInput.value)) {
+        alert('O seu cartão está vencido.');
         return;
     }
 
     if (!cvvInput.value) {
         alert('Favor preencher o cvv do cartão.');
         return;
-    } if (!validators.cvvValidation(cvvInput.value)) {
+    } 
+    if (!validators.cvvValidation(cvvInput.value)) {
         alert('Favor preencher o cvv do cartão corretamente.');
         return;
     };
