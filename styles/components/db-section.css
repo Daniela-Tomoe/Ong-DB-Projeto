@@ -191,6 +191,7 @@
     margin: 0 auto;
     margin-top: 100px;
     align-items: center;
+    font-size: calc(var(--db-font-size-base) + 5px);
 }
 
 .db-section >.image-text >.image {
